@@ -1,7 +1,7 @@
 title:            Geopan
 description:      Mapping with Mongodb.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://localhost:4000
+# url:              http://localhost:4000
 disqus_shortname:
 
 # Owner/author information
@@ -11,11 +11,11 @@ owner:
   bio:            "Spatial data scientist and Application developer."
   email:          gdeboyer@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:  _Geopan
+  twitter:    _Geopan
   facebook:
-  github: geopan
+  github:     geopan
   stackoverflow:
-  linkedin:
+  linkedin:   gdeboyer
   instagram:
   lastfm:
   tumblr:
@@ -39,17 +39,17 @@ links:
     url: /about/
   - title: Posts
     url: /posts/
-  - title: Theme Setup
-    url: /theme-setup/
-  - title: Made Mistakes
-    url: http://mademistakes.com
-    external: true
+#  - title: Theme Setup
+#    url: /theme-setup/
+#  - title: Made Mistakes
+#    url: http://mademistakes.com
+#    external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Australia/Sydney
 future:      true
-pygments:    true
-#highlighter: pygments
+#pygments:    true
+highlighter: pygments
 markdown:    kramdown
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
