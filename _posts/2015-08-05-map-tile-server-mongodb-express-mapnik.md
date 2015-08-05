@@ -30,5 +30,4 @@ We will start by loading some spatial data into mongo and make the newly created
 * Map tiles
 * Pbf (Vector tiles)
 
-
-We will create a simple map portal using leaflet and mapbox-gl for testing this 3 formats. The magic of this is that all the code will be written in Javascript.
+We will create a simple map portal using leaflet and mapbox-gl for testing this 3 formats. All the code will be written in Javascript.
