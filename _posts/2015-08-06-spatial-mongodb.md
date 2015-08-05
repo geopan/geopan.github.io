@@ -15,7 +15,9 @@ share: true
 
 The first step is to create a Mongodb database with some spatial data. For this example, we will use the Australian suburbs layer available on the [Australian Bureau of Statistics](http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.003July%202011).
 
-It took me a bit of time to figure out the right format in import for Mongo. It is actually the `Features` part of a GeoJson:
+## Get the right format
+
+It took me a bit of time to figure out the right format in import for Mongo. It is actually the `Features` part of a [GeoJson](http://geojson.org/) and the geometries have to be in 2 dimensions (no z or altitude).
 
 ~~~ json
 [
@@ -25,18 +27,22 @@ It took me a bit of time to figure out the right format in import for Mongo. It 
 ]
 ~~~
 
-Geometries have to be on 2 dimensions (no z or altitude).
+## Import the data into mongo
 
-Once your certain that your data is in the right format, you can launch the following command which will import each geojson object into the database.
+Once your data is in the right format, run the following [mongoimport](http://docs.mongodb.org/manual/reference/program/mongoimport/) command. It will create a new document for each geojson object. Each document will have the same structure as the original GeoJson. It will make our job easier when we will need to export this data into proper GeoJson format.
 
 ~~~ shell
 mongoimport --db geodb path/to/file.geojson --collection suburbs –-jsonArray
 ~~~
 
-The next step is to create a spatial index on the field containing the geometry in our new collection.
+## Create the spatial index
+
+The next step is to [create the spatial index](http://docs.mongodb.org/manual/tutorial/build-a-2dsphere-index/) on the geometric field (in our case 'geometry') of our new collection.
 
 ~~~ shell
 mongo
 > use geodb
 > db.suburbs.ensureIndex({geometry:'2dsphere'})
-~~~ 
+~~~
+
+If nothing went wrong, you should now be able to query your collection using the [Mongodb geospatial query operators](http://docs.mongodb.org/manual/reference/operator/query-geospatial/)
