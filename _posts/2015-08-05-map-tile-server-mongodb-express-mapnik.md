@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-Using Mongo for spatial data is possible but most of the examples I have seen are limited to point data. Using it as primary database system for geometric data is still unorthodox. This post will describe how to use Mongo that way and how to serve map tiles with Node, Express and Mapnik.
+Using Mongo for spatial data is possible but most of the examples on the Internet are limited to point data. Using it as datastore for geometric data is still unorthodox. This post will describe how to use Mongo that way and how to serve map tiles with Node, Express and Mapnik.
 
 ## What is a tile server ?
 
@@ -27,7 +27,7 @@ Mapnik is an open source toolkit for rendering maps. Among other things, it is u
 
 We will start by loading some spatial data into mongo and make the newly created collection working with spatial query.
 
-Then we will make an application that serve
+Then we will make an application that serve:
 
 - GeoJson
 - Map tiles
@@ -35,4 +35,4 @@ Then we will make an application that serve
 
 We will create a simple map portal using leaflet for testing this 3 formats.
 
-The magic of this is that all the code will be written in Javascript :).
+The magic of this is that all the code will be written in Javascript (exept the xml of the mapnik stylesheet).
