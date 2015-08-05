@@ -4,6 +4,5 @@ description: "A responsive Jekyll theme with editorial tendencies by designer Mi
 tags: [Jekyll, theme, responsive, blog, template]
 image:
   feature: texture-feature-01.jpg
-  credit: Texture Lovers
-  creditlink: http://texturelovers.com
+  credit: "&copy;2015 DigitalGlobe"
 ---
