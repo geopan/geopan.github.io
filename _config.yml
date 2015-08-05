@@ -2,7 +2,7 @@ title:            Geopan
 description:      Mapping with Mongodb.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 # url:            geopan.github.io
-disqus_shortname: geopanmap
+disqus_shortname: geopan
 
 # Owner/author information
 owner:
