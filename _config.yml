@@ -8,8 +8,8 @@ disqus_shortname:
 owner:
   name:           Geopan
   avatar:         bio-photo.jpg
-  bio:            "Describe your self."
-  email:          your@email.com
+  bio:            "Spatial data scientist and Application developer."
+  email:          gdeboyer@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:  _Geopan
   facebook:
@@ -46,7 +46,7 @@ links:
     external: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/New_York
+timezone:    Australia/Sydney
 future:      true
 pygments:    true
 #highlighter: pygments
