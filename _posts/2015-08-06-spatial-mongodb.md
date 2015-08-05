@@ -17,7 +17,7 @@ The first step is to create a Mongodb database with some spatial data. For this 
 
 ## Get the right format
 
-It took me a bit of time to figure out the right format in import for Mongo. It is actually the `Features` part of a [GeoJson](http://geojson.org/) and the geometries have to be in 2 dimensions (no z or altitude).
+It took me a bit of time to figure out the right format to use with the [mongoimport](http://docs.mongodb.org/manual/reference/program/mongoimport/) command. It is actually the `Features` part of a [GeoJson](http://geojson.org/) and the geometries have to be in 2 dimensions (no z or altitude).
 
 ~~~ json
 [
@@ -29,7 +29,7 @@ It took me a bit of time to figure out the right format in import for Mongo. It 
 
 ## Import the data into mongo
 
-Once your data is in the right format, run the following [mongoimport](http://docs.mongodb.org/manual/reference/program/mongoimport/) command. It will create a new document for each geojson object. Each document will have the same structure as the original GeoJson. It will make our job easier when we will need to export this data into proper GeoJson format.
+Once your data is in the right format, run the following command. It will create a new document for each geojson object. Each document will have the same structure as the original GeoJson. It will make our job easier when we will need to export this data into proper GeoJson format.
 
 ~~~ shell
 mongoimport --db geodb path/to/file.geojson --collection suburbs –-jsonArray
@@ -37,7 +37,7 @@ mongoimport --db geodb path/to/file.geojson --collection suburbs –-jsonArray
 
 ## Create the spatial index
 
-The next step is to [create the spatial index](http://docs.mongodb.org/manual/tutorial/build-a-2dsphere-index/) on the geometric field (in our case 'geometry') of our new collection.
+The next step is to [create the spatial index](http://docs.mongodb.org/manual/tutorial/build-a-2dsphere-index/) on the geometric field (in our case "geometry") of our new collection.
 
 ~~~ shell
 mongo
@@ -45,4 +45,4 @@ mongo
 > db.suburbs.ensureIndex({geometry:'2dsphere'})
 ~~~
 
-If nothing went wrong, you should now be able to query your collection using the [Mongodb geospatial query operators](http://docs.mongodb.org/manual/reference/operator/query-geospatial/)
+If nothing went wrong, you should now be able to query your collection using the [Mongodb geospatial query operators](http://docs.mongodb.org/manual/reference/operator/query-geospatial/).
