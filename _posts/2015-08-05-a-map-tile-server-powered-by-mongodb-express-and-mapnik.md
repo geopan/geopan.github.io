@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A map tile server powered by MongoDB, Express and Mapnik"
+description: "A ton of text to test readability."
 modified: 2015-08-05 18:28:53 +1000
 category: [blog]
 tags: [mongodb, mapnik, express, nginx, node-mapnik, node]
@@ -9,12 +10,12 @@ image:
   credit: 
   creditlink: 
 comments: true
-share: 
+share: true
 ---
 
 Using Mongo for spatial data is possible but most of the examples I have seen are limited to point data. Using it as primary database system for geometric data is still unorthodox. This post will describe how to use Mongo that way and how to serve map tiles with Node, Express and Mapnik.
 
-## What is a map tiles server ?
+## What is a tile server ?
 
 JavaScript runs in the browser, which dynamically requests maps from a server in the background (without reloading the whole HTML page) to give a smooth slippy zoomy map browsing experience. The implementation of this is provided by a javascript library, either OpenLayers or Leaflet for example. The map image is built up of many little square images called "tiles". These are rendered and served from a "tile server".
 
@@ -24,7 +25,7 @@ Mapnik is an open source toolkit for rendering maps. Among other things, it is u
 
 ## What exactly are we building ?
 
-First we will load some spatial data into mongo and make the newly created collection working with spatial query.
+We will start by loading some spatial data into mongo and make the newly created collection working with spatial query.
 
 Then we will make an application that serve
 
