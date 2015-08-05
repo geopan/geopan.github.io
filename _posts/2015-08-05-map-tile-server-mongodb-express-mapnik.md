@@ -5,9 +5,9 @@ modified: 2015-08-05 18:28:53 +1000
 category: [blog]
 tags: [mongodb, mapnik, express, nginx, node-mapnik, node]
 image:
-  feature: 
-  credit: 
-  creditlink: 
+  feature: texture-feature-01.jpg
+  credit: "&copy;2015 DigitalGlobe"
+  creditlink: http://earthview.withgoogle.com/
 comments: true
 share: true
 ---

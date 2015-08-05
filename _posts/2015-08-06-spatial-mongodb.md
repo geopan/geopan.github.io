@@ -5,9 +5,9 @@ modified: 2015-08-05 18:28:53 +1000
 category: [blog]
 tags: [mongodb, geojson, qgis, postgis]
 image:
-  feature: 
-  credit: 
-  creditlink: 
+  feature: texture-feature-01.jpg
+  credit: "&copy;2015 DigitalGlobe" 
+  creditlink: http://earthview.withgoogle.com/
 comments: true
 share: true
 ---
@@ -16,7 +16,7 @@ The first step is to create a Mongodb database with some spatial data. For this 
 
 ## Get the right format
 
-It took me a bit of time to figure out the right format to use with the [mongoimport](http://docs.mongodb.org/manual/reference/program/mongoimport/) command. It is actually the `Features` part of a [GeoJson](http://geojson.org/) and the geometries have to be in 2 dimensions (no z or altitude).
+It took me a bit of time to figure out the right format to use with the [mongoimport](http://docs.mongodb.org/manual/reference/program/mongoimport/) command. It is actually the `Features` part of a [GeoJson](http://geojson.org/) and the geometries have to be in 2 dimensions (no z or altitude). You can export the data in the right format by using [QGis](http://www.qgis.org/) and/or [ogr2ogr](http://www.gdal.org/ogr2ogr.html).
 
 ~~~ json
 [
