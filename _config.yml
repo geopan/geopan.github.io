@@ -6,7 +6,7 @@ disqus_shortname:
 
 # Owner/author information
 owner:
-  name:           Geopan
+  name:           Guillaume de Boyer
   avatar:         bio-photo.jpg
   bio:            "Spatial data scientist and Application developer."
   email:          gdeboyer@gmail.com
@@ -48,7 +48,7 @@ links:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Australia/Sydney
 future:      true
-pygments:    true
+# pygments:    true
 highlighter: pygments
 markdown:    kramdown
 
