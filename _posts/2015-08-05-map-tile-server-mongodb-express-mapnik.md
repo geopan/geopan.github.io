@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "A map tile server powered by MongoDB, Express and Mapnik"
-description: "A ton of text to test readability."
 modified: 2015-08-05 18:28:53 +1000
 category: [blog]
 tags: [mongodb, mapnik, express, nginx, node-mapnik, node]
@@ -25,14 +24,11 @@ Mapnik is an open source toolkit for rendering maps. Among other things, it is u
 
 ## What exactly are we building ?
 
-We will start by loading some spatial data into mongo and make the newly created collection working with spatial query.
+We will start by loading some spatial data into mongo and make the newly created collection working with spatial query. Then we will make an application that serve:
 
-Then we will make an application that serve:
+* GeoJson
+* Map tiles
+* Pbf (Vector tiles)
 
-- GeoJson
-- Map tiles
-- Pbf (Vector tiles)
 
-We will create a simple map portal using leaflet for testing this 3 formats.
-
-The magic of this is that all the code will be written in Javascript (exept the xml of the mapnik stylesheet).
+We will create a simple map portal using leaflet and mapbox-gl for testing this 3 formats. The magic of this is that all the code will be written in Javascript.
