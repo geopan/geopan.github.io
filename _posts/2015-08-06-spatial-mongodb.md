@@ -34,9 +34,9 @@ Once your data is in the right format, run the following command. It will create
 mongoimport --db geodb path/to/file.geojson --collection suburbs –-jsonArray
 ~~~
 
-## Create the spatial index
+## Create the spatial indexes
 
-The next step is to [create the spatial index](http://docs.mongodb.org/manual/tutorial/build-a-2dsphere-index/) on the geometric field (in our case "geometry") of our new collection.
+The next step is to [create the spatial indexes](http://docs.mongodb.org/manual/tutorial/build-a-2dsphere-index/) on the geometric field (in our case "geometry") of our new collection.
 
 ~~~ shell
 mongo
